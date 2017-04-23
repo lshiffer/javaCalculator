@@ -1,5 +1,14 @@
 import java.util.Scanner;
 
+/**
+ * <h2> CalculatorGui </h2>
+ * 
+ * Displays results and also a prompt for next input. 
+ * 
+ * @author Luke
+ *
+ */
+
 public class CalculatorGui {
 
 	private final String header = "\n[ Calculator ]";

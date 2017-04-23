@@ -3,7 +3,7 @@ import java.util.HashMap;
 /**
  * <h2> Calculator </h2>
  * 
- * A recursive class that parses a String of User input to calculate. 
+ * A recursive implementation that parses a String of User input to calculate. 
  * 
  * @author Luke
  *
@@ -14,7 +14,6 @@ public class Calculator {
 	/*
 	 * Dev Controls
 	 */
-	
 		// If enabled, program will loop with a menu.
 	private boolean guiEnabled = false;
 		// If enabled, exceptions are displayed.
@@ -23,7 +22,6 @@ public class Calculator {
 	/*
 	 * Constants
 	 */
-	
 		// Default value for result
 	private final Integer defaultValue = null;
 		// Input and Output Messages
@@ -33,7 +31,6 @@ public class Calculator {
 	/*
 	 * String Patterns
 	 */
-	
 		// Where to break the input String
 	private final String Delimiters = "[(), ]+";
 		// Pattern for alphabetic characters
@@ -42,7 +39,6 @@ public class Calculator {
 	/*
 	 * Control Elements
 	 */
-	
 		// Final result
 	private Integer result = null;
 		// Index to bound recursion
@@ -53,7 +49,6 @@ public class Calculator {
 	/*
 	 * Data Structures
 	 */
-	
 		// Storage for 'let' variables
 	private HashMap<String, Integer> variables = new HashMap<String, Integer>();
 	
@@ -71,7 +66,7 @@ public class Calculator {
 	/**
 	 * Constructor with input
 	 * 
-	 * @param input Calculation String of arithmetic expressions. 
+	 * @param input Calculation String of expressions. 
 	 */
 	public Calculator(String input) {		
 		String[] inputTokens = prepareInput(input);
@@ -112,18 +107,6 @@ public class Calculator {
 	}
 	
 	/**
-	 * Resets the Calculator.
-	 * result:  Represents the final outcome (error message or value).
-	 * controlIndex:  Monitors the recursion calls to prevent out of bounds and infinite loop.
-	 * errorFlag:  For invalid input.
-	 */
-	private void resetCalculator() {
-		result = null;
-		controlIndex = 0;
-		errorFlag = false;
-	}
-	
-	/**
 	 * Ensures entire expression is evaluated before returning an outcome. 
 	 * Calls the recursive method 'performAction' until either:
 	 * 		a)  All input tokens have been evaluated.
@@ -141,15 +124,6 @@ public class Calculator {
 		return (result != null ? result.toString() : inputError);
 	}
 	
-	/**
-	 * Prepares and parses the input for calculation.
-	 * 
-	 * @param input Expression string
-	 * @return Lower-cased, tokenized expression string. 
-	 */
-	private String[] prepareInput(String input) {
-		return input.toLowerCase().split(Delimiters);
-	}
 
 	/**
 	 * Selects the next action to be performed and calls the corresponding method. 
@@ -401,6 +375,28 @@ public class Calculator {
 		}
 		
 		return false;
+	}
+
+	/**
+	 * Prepares and parses the input for calculation.
+	 * 
+	 * @param input Expression string
+	 * @return Lower-cased, tokenized expression string. 
+	 */
+	private String[] prepareInput(String input) {
+		return input.toLowerCase().split(Delimiters);
+	}
+
+	/**
+	 * Resets the Calculator.
+	 * result:  Represents the final outcome (error message or value).
+	 * controlIndex:  Monitors the recursion calls to prevent out of bounds and infinite loop.
+	 * errorFlag:  For invalid input.
+	 */
+	private void resetCalculator() {
+		result = null;
+		controlIndex = 0;
+		errorFlag = false;
 	}
 	
 	/**
