@@ -9,7 +9,7 @@ import org.junit.Test;
  * A series of tests to ensure negative results are properly handled. 
  * 
  * Tests are organized by arithmetic (Add, Sub, Mult, Div) including
- * a mix of Positive and Negative values. 
+ * a mix of faulty input after a series of general faulty inputs. 
  * 
  * Following arithmetic tests are nested tests to ensure nested
  * expressions produce the correct outcome including the 'let' expression
