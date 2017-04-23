@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CalculatorMenu {
+public class CalculatorGui {
 
 	private final String header = "\n[ Calculator ]";
 
@@ -12,7 +12,7 @@ public class CalculatorMenu {
 	
 	Scanner consoleScanner;
 	
-	public CalculatorMenu() {
+	public CalculatorGui() {
 		consoleScanner = new Scanner(System.in);
 	}
 	

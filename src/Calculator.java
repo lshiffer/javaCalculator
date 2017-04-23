@@ -60,7 +60,7 @@ public class Calculator {
 	/*
 	 * GUI reference
 	 */
-	private CalculatorMenu gui = new CalculatorMenu();
+	private CalculatorGui gui = new CalculatorGui();
 
 	
 	public Calculator() {
