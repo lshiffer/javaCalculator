@@ -38,6 +38,42 @@ public class CalculatorNegativeTest {
 		assertTrue("  equals [inputError]", calc.runCalculation(input).equals(inputError));
 	}
 	@Test
+	public void testMissingInput() {
+		String input = "add ";
+				
+		assertTrue("  equals [inputError]", calc.runCalculation(input).equals(inputError));
+	}
+	@Test
+	public void testMissingInput1() {
+		String input = "add(2, ";
+				
+		assertTrue("  equals [inputError]", calc.runCalculation(input).equals(inputError));
+	}
+	@Test
+	public void testMissingInput2() {
+		String input = "add(, 4)";
+				
+		assertTrue("  equals [inputError]", calc.runCalculation(input).equals(inputError));
+	}
+	@Test
+	public void testMissingInput3() {
+		String input = "let(, 4,)";
+				
+		assertTrue("  equals [inputError]", calc.runCalculation(input).equals(inputError));
+	}
+	@Test
+	public void testJustAnInt() {
+		String input = "5";
+				
+		assertTrue("  equals [inputError]", calc.runCalculation(input).equals(inputError));
+	}
+	@Test
+	public void testDecimals() {
+		String input = "add(4.5, 3.0)";
+				
+		assertTrue("  equals [inputError]", calc.runCalculation(input).equals(inputError));
+	}
+	@Test
 	public void testWrongInput() {
 		String input = "Hi, this is a test.";
 				
