@@ -10,7 +10,7 @@ Calculator will evaluate a User provided expression String and display the resul
     * mult(*expression*, *expression*)
     * div(*expression*, *expression*)
 * Let:  Assign a value to a variable
-    * ex. *let(<variable name>, <value>, <expression where variable is used>)*
+    * ex. *let(*variable name*, *value*, *expression where variable is used*)*
 
 **Examples**
 
