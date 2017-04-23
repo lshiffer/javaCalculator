@@ -50,7 +50,7 @@ Responsible for outputting responses and also displaying a prompt should 'guiEna
 
 **/test**
 
-A Test Suite is provided.  A total of 47 junit tests exist within CalculatorNegativeTest and CalculatorPositiveTest.  Both can be run by using the suite CalculatorTestSuite
+A Test Suite is provided.  A total of 53 junit tests exist within CalculatorNegativeTest and CalculatorPositiveTest.  Both can be run by using the suite CalculatorTestSuite
 
 ### To Run ###
 From the /src folder in a CLI:
